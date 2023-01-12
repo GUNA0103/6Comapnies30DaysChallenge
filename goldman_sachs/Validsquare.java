@@ -2,7 +2,7 @@ package goldman_sachs;
 
 import java.util.*;
 
-class Validsquare {
+public class Validsquare {
     public static boolean valid_square(int[] p1, int[] p2, int[] p3, int[] p4) {
 
         HashSet<Integer> set = new HashSet<>();
@@ -24,7 +24,7 @@ class Validsquare {
         return false;
     }
 
-    public void main(String[] args) {
+    public static void main(String[] args) {
 
         Scanner gt = new Scanner(System.in);
         int arr1[] = new int[2];
