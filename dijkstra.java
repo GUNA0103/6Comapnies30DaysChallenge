@@ -2,7 +2,7 @@ import java.util.*;
 import java.io.*;
 
 public class dijkstra {
-    public static int vertices = 5;
+    public static int vertices = 7;
 
     public static int minkey(int key[], boolean visited[]) {
         int min = Integer.MAX_VALUE;
@@ -40,14 +40,14 @@ public class dijkstra {
 
         }
         for (int i = 1; i < vertices; i++) {
-            System.out.println(parent[i] + "-" + i + "\t" + graph[i][parent[i]]);
+            System.out.println("outp" + parent[i] + "-" + i + "\t" + graph[i][parent[i]]);
         }
     }
 
     public static void main(String[] args) {
         dijkstra t = new dijkstra();
-        int graph[][] = new int[][] { { 0, 2, 0, 6, 0 }, { 2, 0, 3, 8, 5 }, { 0, 3, 0, 0, 7 }, { 6, 8, 0, 0, 9 },
-                { 0, 5, 7, 9, 0 } };
+        int graph[][] = new int[][] { { 0, 2, 0, 0, 5, 0, 7 }, { 2, 0, 3, 3, 0, 0, 0 }, { 0, 3, 0, 0, 0, 1, 0 },
+                { 0, 3, 0, 0, 0, 1, 0 }, { 5, 0, 0, 0, 0, 0, 2 }, { 0, 0, 1, 1, 0, 0, 1 }, { 7, 0, 0, 3, 2, 1, 0 } };
         t.primmst(graph);
     }
 
